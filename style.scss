@@ -43,6 +43,7 @@ body{
     width: 90%;
     height: 100%;
     margin: 0 auto;
+    background-color: #fff;
 }
 .grid{
     background-color: #fff;
@@ -211,13 +212,13 @@ body{
     }
 }
 .color1{
-    background-color: #f29324;
+    background-color: #ffc788;
 }
 .color2{
-    background-color: #edd2b8;
+    background-color: #ffdebf;
 }
 .color3{
-    background-color: #df744a;
+    background-color: #ffa27d;
 }
 
 // media home
@@ -257,6 +258,7 @@ body{
     .text{
         width: 100%;
         height: 150px;
+        text-align: center;
     }
     .container{
         height: auto;
@@ -295,6 +297,12 @@ body{
             background-color: #fff;
             clip-path: circle(26.1% at 51% 0);
         }
+        h3{
+            padding: 7px;
+        }
+        p{
+            padding: 7px;
+        }
     }
     .menu-semanal__color1{
         background-color: #d7fdef;
@@ -315,6 +323,15 @@ body{
             border-radius: 8px;
             margin: 1rem;
         }
+        .linea__center--color1{
+            background-color: #62ffc6;
+        }
+        .linea__center--color2{
+            background-color: #ff966f;
+        }
+        .linea__center--color3{
+            background-color: #ff85aa;
+        }
     }
 }
 // media servicios
@@ -329,5 +346,115 @@ body{
             width: 300px;
             height: 400px;
         }
+    }
+}
+
+// seccion nosotros
+.seccion__nosotros{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    .info{
+        width: 500px;
+        padding: 2rem;
+    }
+    .foto img{
+        border-radius: 50%;
+        width: 400px;
+        height: 400px;
+    }
+}
+
+// media nosotros
+@media only screen and (min-width:320px) and (max-width:599px) {
+    .seccion__nosotros{
+        flex-direction: column;
+        .info{
+            width: 300px;
+            padding: 0;
+        }
+        .foto img{
+            width: 250px;
+            height: 250px;
+        }
+    }
+}
+
+// seccion contacto
+.seccion__contacto{
+    width: 700px;
+    height: 500px;
+    margin: 0 auto;
+    h3{
+        font-size: 3rem;
+        padding: 1rem;
+        i{
+            padding: 1rem;
+        }
+    }
+    .wpp{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: all .5s;
+        h4{
+            color: rgb(70, 190, 70);
+        }
+        i{
+            color: green;
+            font-size: 2rem;
+            padding: 10px;
+        }
+    }
+}
+.wpp:hover{
+    transition: all .5s;
+    text-shadow: 2px 2px 5px rgb(128, 255, 128);
+}
+.redes{
+    width: 700px;
+    text-align: center;
+    i{
+        font-size: 2rem;
+    }
+}
+
+// media contacto
+@media only screen and (min-width:320px) and (max-width:599px) {
+    .seccion__contacto{
+        width: 300px;
+        h3{
+            font-size: 1.2rem;
+        }
+    }
+    .redes{
+        width: 300px;
+    }
+}
+
+// footer
+footer{
+    background-color: #ff7b00;
+    text-align: center;
+    p{
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+    i{
+        font-size: 2rem;
+        padding: 10px;
+    }
+}  
+// media footer
+@media only screen and (min-width:320px) and (max-width:599px) {
+    footer p{
+        font-size: 1rem;
+    }
+    footer i{
+        font-size: 1.5rem;
     }
 }
