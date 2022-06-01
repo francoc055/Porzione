@@ -13,9 +13,12 @@ body{
 }
 // nav
 .navbar{
+    position: sticky;
+    z-index: 2;
+    top: 0;
     width: 90%;
     margin: 0 auto;
-    top: 90px;
+    border-bottom: .5px solid rgb(226, 226, 226);
 }
 .navbar-light .navbar-nav .nav-link{
     color: black;
@@ -32,6 +35,7 @@ body{
     align-items: center;
     h2{
         color: rgb(70, 190, 70);
+        padding: 8px;
         span{
             color: green;
         }
@@ -53,6 +57,7 @@ body{
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(6, 1fr);
     overflow: hidden;
+    margin-bottom: 3rem;
 }
 .grid__text{
     grid-row: 3/4;
@@ -144,14 +149,14 @@ body{
     content: ""; 
     grid-column: 4/-1;
     grid-row: 1/-1;
-    background-image: url(img/gridimg.jpg);
+    background-image: url(img/grid.jpg);
     background-size: cover;
     background-position: center;
     // border-radius: 1rem;
     // margin: 1rem;
 }
 .grid__text--title{
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: #000;
     width: 400px;
     text-align: center;
@@ -183,46 +188,58 @@ body{
         opacity: 1;
     }
 }
-.container{
-    background-color: #fff;
-    max-width: 100%;
-    height: 300px;
-}
-.text{
-    display: flex;
-    flex-direction: column;
-    height: 200px;
-    width: 500px;
-    justify-content: center;
-}
-.container__cards{
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    bottom: 270px;
-}
-.card{
-    height: 250px;
-    width: 210px;
-    margin: 1rem;
-    border-radius: 8px;
-    p{
-        text-align: center;
-        padding: 1rem;
-    }
-}
-.color1{
-    background-color: #ffc788;
-}
-.color2{
-    background-color: #ffdebf;
-}
-.color3{
-    background-color: #ffa27d;
-}
+// .container{
+//     background-color: #fff;
+//     max-width: 100%;
+//     height: 300px;
+// }
+// .text{
+//     display: flex;
+//     flex-direction: column;
+//     height: 200px;
+//     width: 500px;
+//     justify-content: center;
+// }
+// .container__cards{
+//     display: flex;
+//     justify-content: flex-end;
+//     position: relative;
+//     bottom: 270px;
+// }
+// .card{
+//     height: 250px;
+//     width: 210px;
+//     margin: 1rem;
+//     border-radius: 8px;
+//     p{
+//         text-align: center;
+//         padding: 1rem;
+//     }
+// }
+// .color1{
+//     background-color: #f48fb1;
+// }
+// .color2{
+//     background-color: #ff8a65;
+// }
+// .color3{
+//     background-color: #4ac6d6;
+// }
 
 // media home
 @media only screen and (min-width:320px) and (max-width:599px) {
+    .navbar-nav{
+        align-items: center;
+        transform: translateX(-100px);
+        animation: nav 1s both;
+        opacity: 0;
+    }
+    @keyframes nav{
+        to{
+            transform: unset;
+            opacity: 1;
+        }
+    }
     .navbar{
         width: 100%;
         top: 0;
@@ -273,6 +290,7 @@ body{
 // seccion servicios
 .seccion__serv{
     width: 100%;
+    // height: 700px;
     background-color: #fff;
     h2{
         text-align: center;
@@ -284,9 +302,10 @@ body{
 .article-semanal{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     .menu-semanal{
-        height: 450px;
-        width: 300px;
+        height: 480px;
+        width: 320px;
         margin: 1rem;
         border-radius: 8px;
         i{
@@ -299,6 +318,7 @@ body{
         }
         h3{
             padding: 7px;
+            text-align: center;
         }
         p{
             padding: 7px;
@@ -311,7 +331,7 @@ body{
         background-color: #faded4;
     }
     .menu-semanal__color3{
-        background-color: #fddbe5;
+        background-color: #ffa3a3;
     }
     .linea{
         display: flex;
@@ -330,9 +350,64 @@ body{
             background-color: #ff966f;
         }
         .linea__center--color3{
-            background-color: #ff85aa;
+            background-color: #fd5b5b;
         }
     }
+}
+.seccion__viandas{
+    width: 100%;
+    height: auto;
+    padding: 3rem;
+    h2{
+        text-align: center;
+        font-size: 3rem;
+        padding-top: 1rem;
+    }
+}
+.viandasFlex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .viandasimg {
+        background-color: rgba(214,214,214,0.5);
+        margin: 3rem;
+        width: 420px;
+        height: 530px;
+        text-align: center;
+        border-radius: 8px;
+        img{
+        width: 400px;
+        height: 400px;
+        margin-top: 10px;
+        border-radius: 8px;
+        }
+    }
+    h4 , p{
+        width: 400px;
+        // text-align: center;
+    }
+}
+.seccion__opiniones{
+    width: 100%;
+    height: auto;
+    h2{
+        text-align: center;
+        padding: 1rem;
+        font-size: 2.5rem;
+    }
+}
+.opinionesFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.opinion{
+    width: 200px;
+    height: 200px;
+    background-color: #f5f5f5;
+    margin: 1rem;
+    box-shadow: 3px 3px 8px rgb(59, 59, 59);
 }
 // media servicios
 @media only screen and (min-width:320px) and (max-width:599px) {
@@ -340,26 +415,65 @@ body{
         padding-top: 2rem;
     }
     .article-semanal{
-        flex-direction: column;
-        align-items: center;
+        // flex-direction: column;
+        // align-items: center;
         .menu-semanal{
             width: 300px;
             height: 400px;
         }
+    }
+    // seccion viandas
+    .seccion__viandas h2{
+        font-size: 1.5rem;
+    }
+    .viandasFlex{
+        .viandasimg{
+            width: 320px;
+            height: 450px;
+            img{
+                width: 300px;
+                height: 300px;
+                }    
+        }
+        h4 , p{
+            width: 300px;
+        }
+    }
+    // seccion opiniones
+    .seccion__opiniones h2{
+        font-size: 1.5rem;
     }
 }
 
 // seccion nosotros
 .seccion__nosotros{
     width: 100%;
-    height: 600px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     margin-top: 5rem;
     .info{
         width: 500px;
         padding: 2rem;
+        .info__quiensoy{
+            font-size: 3rem;
+        }
+        .info__estudios{
+            font-size: 2.2rem;
+        }
+        h3{
+            color: #ff7b00;
+        }
+        p{
+            font-size: 1.2rem;
+        }
+        p i{
+            padding: 8px;
+            font-size: 15px;
+            color: #ec760b;
+        }
     }
     .foto img{
         border-radius: 50%;
@@ -367,11 +481,10 @@ body{
         height: 400px;
     }
 }
-
 // media nosotros
 @media only screen and (min-width:320px) and (max-width:599px) {
     .seccion__nosotros{
-        flex-direction: column;
+        // flex-direction: column;
         .info{
             width: 300px;
             padding: 0;
@@ -385,50 +498,70 @@ body{
 
 // seccion contacto
 .seccion__contacto{
-    width: 700px;
-    height: 500px;
-    margin: 0 auto;
+    width: 90%;
+    height: auto;
+    margin: 2rem auto;
+    background-color: #fce3cd;
     h3{
-        font-size: 3rem;
+        font-size: 2.3rem;
+        text-align: center;
         padding: 1rem;
-        i{
-            padding: 1rem;
-        }
+    }
+    p{
+        font-size: 1.8rem;
+        text-align: center;
     }
     .wpp{
         display: flex;
-        align-items: center;
+        // align-items: center;
         justify-content: center;
+        // text-align: center;
         text-decoration: none;
-        transition: all .5s;
         h4{
-            color: rgb(70, 190, 70);
+            color: #fff;
+            width: 180px;
+            text-align: center;
+            border: 1px solid rgb(70, 190, 70);
+            border-radius: 20px;
+            background-color: rgb(70, 190, 70);
+            transition: all .5s;
         }
         i{
-            color: green;
+            color: #fff;
             font-size: 2rem;
-            padding: 10px;
+            padding: 8px;
         }
     }
 }
-.wpp:hover{
+.wpp h4:hover{
     transition: all .5s;
-    text-shadow: 2px 2px 5px rgb(128, 255, 128);
+    box-shadow: 2px 2px 5px black;
+    background-color: rgb(27, 187, 27);
 }
 .redes{
-    width: 700px;
+    width: 100%;
     text-align: center;
-    i{
+    margin-top: 2rem;
+    a i{
+        color: #000;
         font-size: 2rem;
+        padding: 1rem;
+        transition: all 1s;
     }
+}
+.redes i:hover{
+    transition: all 1s;
+    text-shadow: 2px 2px 7px black;
 }
 
 // media contacto
 @media only screen and (min-width:320px) and (max-width:599px) {
     .seccion__contacto{
-        width: 300px;
         h3{
-            font-size: 1.2rem;
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1.5rem;
         }
     }
     .redes{
@@ -448,13 +581,37 @@ footer{
         font-size: 2rem;
         padding: 10px;
     }
+    .up{
+        height: 40px;
+        width: 40px;
+        position: fixed;
+        bottom: 20px;
+        right: 100px;
+        border: solid 3px #000;
+        border-radius: 50%;
+        box-shadow: 2px 2px 7px #000;
+        i{
+            font-size: 1rem;
+            color: #000;
+        }
+    }
 }  
 // media footer
 @media only screen and (min-width:320px) and (max-width:599px) {
-    footer p{
+    footer{
+    p{
         font-size: 1rem;
     }
-    footer i{
+    i{
         font-size: 1.5rem;
     }
+    .up{
+        right: 10px;
+        height: 35px;
+        width: 35px;
+        i{
+            font-size: 10px;
+        }
+    }
+}
 }

@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- fuente -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- link bt css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <!-- link animaciones aos -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <!-- link css -->
     <link rel="stylesheet" href="style.css">
     <title>Porzione</title>
@@ -22,7 +18,7 @@
   <!-- nav -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="boton">
-    <a class="navbar-brand" href="#"><img src="img/PorzioneViandas.png" alt="logo" width="13%"> <h2> <span> Porzione </span>Viandas</h2></a>
+    <a class="navbar-brand" href="#"><img src="img/PorzioneViandas.png" alt="logo" width="10%"> <h2> <span> Porzione </span>Viandas</h2></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -36,17 +32,18 @@
           <a class="nav-link" href="#servicios">Servicios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#nosotros">Nosotros</a>
+          <a class="nav-link" href="#nosotros">¿Quien soy?</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contacto">Contacto</a>
         </li>
       </ul>
     </div>
+    <div id="home"></div>
   </nav>
   <!-- seccion home -->
   <main class="cuerpo">
-    <section class="grid" id="home">
+    <section class="grid">
       <article class="grid__text">
         <h1 class="grid__text--title">¿Sin ganas de cocinar?</h1>
         <h2 class="grid__text--p">En Porzione Viandas te ofrecemos:</h2>
@@ -55,9 +52,10 @@
         <p class="menu menu3"><i class="fa-solid fa-utensils"></i>Menu para diabeticos</p>
         <p class="menu menu4"><i class="fa-solid fa-utensils"></i>Tartas clasicas e integrales</p>
         <div><a href="#servicios">Servicios</a></div>
+        <div id="servicios"></div>
       </article>
     </section>
-    <section class="container">
+    <!-- <section class="container">
       <article class="text">
         <h2>Lorem ipsum dolor sit.</h2>
         <p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -73,15 +71,15 @@
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, vitae?</p>
         </div>
       </article>
-    </section>
+    </section> -->
     <!-- seccion servicios -->
-    <section class="seccion__serv" id="servicios">
+    <section class="seccion__serv">
       <h2>Lorem ipsum dolor sit amet.</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, voluptatum?</p>
       <article class="article-semanal">
         <div class="menu-semanal menu-semanal__color1" data-aos="fade-right">
           <i class="fa-solid fa-carrot"></i> 
-          <h3>Lorem ipsum dolor sit.</h3>
+          <h3>Menu semanal</h3>
           <div class="linea">
             <div class="linea__center linea__center--color1"></div>
           </div>
@@ -89,7 +87,7 @@
         </div>
         <div class="menu-semanal menu-semanal__color2" data-aos="fade-up">
           <i class="fa-solid fa-carrot"></i> 
-          <h3>Lorem ipsum dolor sit.</h3>
+          <h3>Menu sin harinas</h3>
           <div class="linea">
             <div class="linea__center linea__center--color2"></div>
           </div>
@@ -97,7 +95,7 @@
         </div>
         <div class="menu-semanal menu-semanal__color3" data-aos="fade-left">
           <i class="fa-solid fa-carrot"></i> 
-          <h3>Lorem ipsum dolor sit.</h3>
+          <h3>Tartas integrales y clasicas</h3>
           <div class="linea">
             <div class="linea__center linea__center--color3"></div>
           </div>
@@ -105,35 +103,90 @@
         </div>
       </article>
     </section>
+    <section class="seccion__viandas">
+      <h2>Algunas de nuestras viandas</h2>
+      <div class="viandasFlex">
+        <div class="viandasimg">
+          <img src="img/grid.jpg" alt="">
+          <h4>Lorem ipsum dolor sit amet.</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat commodi at natus eveniet omnis eius?</p>
+        </div>
+        <div class="viandasimg">
+          <img src="img/grid.jpg" alt="">
+          <h4>Lorem ipsum dolor sit amet.</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat commodi at natus eveniet omnis eius?</p>
+        </div>
+        <div class="viandasimg">
+          <img src="img/grid.jpg" alt="">
+          <h4>Lorem ipsum dolor sit amet.</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat commodi at natus eveniet omnis eius?</p>
+        </div>
+        <div class="viandasimg">
+          <img src="img/grid.jpg" alt="">
+          <h4>Lorem ipsum dolor sit amet.</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat commodi at natus eveniet omnis eius?</p>
+        </div>
+        <div class="viandasimg">
+          <img src="img/grid.jpg" alt="">
+          <h4>Lorem ipsum dolor sit amet.</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat commodi at natus eveniet omnis eius?</p>
+        </div>
+        <div class="viandasimg">
+          <img src="img/grid.jpg" alt="">
+          <h4>Lorem ipsum dolor sit amet.</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat commodi at natus eveniet omnis eius?</p>
+        </div>
+      </div>
+    </section>
+    <section class="seccion__opiniones">
+      <h2>Clientes que nos siguen eligiendo</h2>
+      <article class="opinionesFlex">
+        <div class="opinion">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, ducimus.</p>
+        </div>
+        <div class="opinion">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, ducimus.</p>
+        </div>
+        <div class="opinion">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, ducimus.</p>
+        </div>
+        <div class="opinion">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, ducimus.</p>
+        </div>
+      </article>
+    </section>
     <!-- seccion nosotros -->
     <section class="seccion__nosotros" id="nosotros">
-      <div class="info" data-aos="fade-right"
-      data-aos-offset="300"
-      data-aos-easing="ease-in-sine">
-        <h3>Lorem, ipsum dolor.</h3>
+      <div class="info">
+        <h3 class="info__quiensoy">¿Quien soy?</h3>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium et minus vitae nulla ea fuga sint enim tempore, tenetur nisi obcaecati eaque possimus, odio velit? Impedit officiis et laboriosam laudantium.</p>
+        <h3 class="info__estudios">Estudios</h3>
+        <p><i class="fa-solid fa-sheet-plastic"></i>Manipulador de alimentos</p>
+        <p><i class="fa-solid fa-sheet-plastic"></i>Cocina avanzada UNLP</p>
+        <p><i class="fa-solid fa-sheet-plastic"></i>Gastronomia inicial</p>
       </div>
-      <div class="foto" data-aos="zoom-in">
+      <div class="foto">
         <img src="img/gridimg.jpg" alt="">
       </div>
     </section>
     <!-- seccion contacto -->
     <section class="seccion__contacto" id="contacto">
-        <h3><i class="fa-solid fa-mobile"></i>Contactate con nosotros</h3>
-        <a href="https://web.whatsapp.com/" target="_blank" class="wpp">
-          <h4>WhatsApp</h4>
-          <i class="fa-brands fa-whatsapp"></i>
+        <h3>¿Queres encargar tu pack de viandas?</h3>
+        <p>contactate con nosotros</p>
+        <a href="https://wa.me/1123805769" target="_blank" class="wpp">
+          <h4>WhatsApp<i class="fa-brands fa-whatsapp"></i></h4>
         </a>
         <div class="redes">
-          <h3>Redes sociales <i class="fa-solid fa-heart"></i></h3>
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-instagram"></i>
+          <h3>Redes sociales</h3>
+          <a href="https://www.facebook.com/porzionediamore/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://instagram.com/porzioneviandas?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         </div>
     </section>
     <!-- footer -->
     <footer class="container-fluid">
       <p>copyright - todos los derechos reservados</p>
       <i class="fa-solid fa-copyright"></i>
+      <a href="#" class="up"><i class="fa-solid fa-angle-up"></i></a>
     </footer> 
   </main>
 
